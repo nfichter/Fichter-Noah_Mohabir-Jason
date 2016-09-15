@@ -13,11 +13,8 @@ for line in occL:
 
 def pickOccupation():
     randNum = random.random()*100
-    thisUpperBound = 0
     for num in upperBoundL:
-        if thisUpperBound < num:
-            break;
-        else:
-            thisUpperBound = num
+        if randNum < num:
+              break;
     return occDict[thisUpperBound]
 
