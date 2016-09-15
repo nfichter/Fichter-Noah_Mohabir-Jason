@@ -1,6 +1,9 @@
 import random
 
-occL = open("occupations.csv").readLine();
+occL = open("occupations.csv").read();
+occL = occL.split('\r\n')[1:-1]
+
+print occL
 occDict = {}
 upperBoundL = []
 currentUpperBound = 0
@@ -16,5 +19,7 @@ def pickOccupation():
     for num in upperBoundL:
         if randNum < num:
               break;
-    return occDict[thisUpperBound]
+    return occDict[currentUpperBound]
 
+
+print pickOccupation()
