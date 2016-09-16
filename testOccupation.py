@@ -38,9 +38,9 @@ def test():
     chosenOne = pickOccupation()
     buckets[chosenOne] += 1
 
-  for line in occS:
+  for line in occS: #print in order of original so you can compare easily
     comma = line.rfind(',')
     occKey = line[:comma].strip('"')
-    print occKey,buckets[occKey]/100.0
+    print occKey,buckets[occKey]/100.0 #print the occupation and its percentage
 
 test()
