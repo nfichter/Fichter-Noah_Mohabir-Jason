@@ -40,6 +40,6 @@ def test():
     buckets[chosenOne] += 1
 
   for key in occDict: #prints the key and its corresponding percentage (10000/100 = 100, so that will give percentage)
-    print key,buckets[key]/100
+    print key,buckets[key]/100.0
 
 test()
