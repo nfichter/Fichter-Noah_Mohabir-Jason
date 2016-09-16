@@ -19,7 +19,7 @@ del occDict['Total'] # You can probably remove this in an elegant way, but (shru
 
 
 def pickOccupation():
-    randNum = random.random()*100
+    randNum = random.random()*99.8
     passenger = 0 # Will "travel" / iterate through the dictionary
     for occKey in occDict:
         passenger += occDict[occKey]
