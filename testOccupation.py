@@ -36,10 +36,11 @@ def test():
     
   for num in range(10000): #runs 10000 times, picks one occupation and adds one to that bucket
     chosenOne = pickOccupation()
-    print chosenOne
     buckets[chosenOne] += 1
 
-  for key in occDict: #prints the key and its corresponding percentage (10000/100 = 100, so that will give percentage)
-    print key,buckets[key]/100.0
+  for line in occS:
+    comma = line.rfind(',')
+    occKey = line[:comma].strip('"')
+    print occKey,buckets[occKey]/100.0
 
 test()
